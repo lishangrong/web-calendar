@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Calendar</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="toolbar">
+        <div class="toolbar-left">
+          <h1 class="app-title">日历</h1>
+          <button id="btn-today" class="btn" type="button">今天</button>
+          <button id="btn-prev" class="btn btn-icon" type="button" aria-label="上一页">&#8249;</button>
+          <button id="btn-next" class="btn btn-icon" type="button" aria-label="下一页">&#8250;</button>
+          <span id="toolbar-label" class="toolbar-label"></span>
+        </div>
+        <div class="toolbar-right">
+          <div class="view-switch" role="tablist">
+            <button id="view-month" class="btn view-btn active" type="button">月</button>
+            <button id="view-week" class="btn view-btn" type="button">周</button>
+          </div>
+          <button id="btn-new-event" class="btn btn-primary" type="button">+ 新建事件</button>
+        </div>
+      </header>
+      <main id="calendar-root" class="calendar-root"></main>
+    </div>
+    <div id="panel-root"></div>
+    <div id="toast-root" class="toast-root" aria-live="polite"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
