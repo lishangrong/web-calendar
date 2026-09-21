@@ -315,7 +315,11 @@ export function createEventPanel() {
     });
 
     footer.append(saveBtn, cancelBtn);
-    panel.append(header, form, footer);
+    // 点击保存按钮无反应bug修复 start
+    // panel.append(header, form, footer);
+    form.append(footer);
+    panel.append(header, form);
+    // 点击取消按钮无反应bug修复 end
 
     function field(labelText, buildControl) {
       const group = document.createElement('label');
